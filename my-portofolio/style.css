@@ -1,0 +1,198 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  #main {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Intro Section */
+  #main {
+    position: absolute;
+    top: 40%;
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  #main h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  
+  #main nav a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.3em 0.6em;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  #main nav a:hover {
+    background: #ffffff;
+    color: #333333;
+  }
+  
+  /* Page and Canvas Styles */
+  #page,
+  #page1,
+  #page2,
+  #page3 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+
+  
+  #img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust as needed */
+    gap: 10px;
+    max-width: 800px; /* Optional: Limit width */
+    margin: 20px auto;
+  }
+  
+  #img-grid img {
+    width: 100%; /* Ensure images scale to fit grid cells */
+    height: 100%;
+    border-radius: 8px; /* Optional: Rounded corners */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Hover effect */
+  }
+  
+  #img-grid img:hover {
+    transform: scale(1.05); /* Optional: Slight zoom on hover */
+  }
+
+  
+/* Grid style for projects on page 2 */
+#page2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#page2 h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fdfdfd;
+}
+
+/* Project grid layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on project items */
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay description styling */
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-item:hover .project-description {
+    opacity: 1;
+}
+
+.project-description h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-description p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Tech Stack Icons Styling */
+.tech-stack {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    margin-top: 10px;
+}
+
+.tech-stack img {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Add a hover effect for icons */
+.tech-stack img:hover {
+    transform: scale(1.1);
+}
+
+
+  
+  canvas {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  
+ 
+  
